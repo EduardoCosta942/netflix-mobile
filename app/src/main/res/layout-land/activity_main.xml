@@ -168,6 +168,7 @@
                         android:textColor="@color/white"
                         app:cornerRadius="6dp"
                         app:icon="@drawable/baseline_play_arrow_24"
+                        app:iconTint="@color/white"
                         android:layout_weight="1"
                         android:layout_gravity="center"
                         android:gravity="center"
