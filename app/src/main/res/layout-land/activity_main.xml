@@ -6,10 +6,9 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:foregroundTint="#FF0000"
-    android:background="#161417"
+    android:foregroundTint="@color/foreGroundTint"
+    android:background="@color/backgroundColor"
     tools:context=".MainActivity">
-
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -18,21 +17,19 @@
 
         <!-- Background -->
         <ImageView
-            android:id="@+id/bg_image"
+            android:id="@+id/background_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:scaleType="centerCrop"
             app:srcCompat="@drawable/capa"
             tools:visibility="visible" />
 
-
-
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/logo_peaky"
+                android:id="@+id/peaky_blinders_logo"
                 android:layout_width="94dp"
                 android:layout_height="64dp"
                 app:srcCompat="@drawable/logo_peaky"
@@ -55,18 +52,18 @@
                     >
 
                     <ImageView
-                        android:id="@+id/imageView"
+                        android:id="@+id/netflix_logo"
                         android:layout_width="110dp"
                         android:layout_height="54dp"
                         app:srcCompat="@drawable/logo"
                         android:layout_gravity="center_vertical"/>
 
                     <TextView
-                        android:id="@+id/series"
+                        android:id="@+id/series_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Séries"
-                        android:textColor="#FFFFFF"
+                        android:text="@string/series"
+                        android:textColor="@color/white"
                         android:visibility="visible"
                         android:layout_weight="1"
                         android:gravity="end"
@@ -76,11 +73,11 @@
                         />
 
                     <TextView
-                        android:id="@+id/films"
+                        android:id="@+id/movies_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Filmes"
-                        android:textColor="#FFFFFF"
+                        android:text="@string/movies"
+                        android:textColor="@color/white"
                         android:visibility="visible"
                         android:layout_weight="1"
                         android:gravity="end"
@@ -90,11 +87,11 @@
                         />
 
                     <TextView
-                        android:id="@+id/mine_list"
+                        android:id="@+id/my_list_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Minha Lista"
-                        android:textColor="#FFFFFF"
+                        android:text="@string/mine_list"
+                        android:textColor="@color/white"
                         android:visibility="visible"
                         android:layout_weight="1"
                         android:gravity="end"
@@ -113,29 +110,29 @@
 
 
                     <TextView
-                        android:id="@+id/filter_violence"
+                        android:id="@+id/violence_filter_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Violência"
-                        android:textColor="#FFFFFF"
+                        android:text="@string/violence_category"
+                        android:textColor="@color/white"
                         android:layout_weight="1"
                         android:gravity="end" />
 
                     <TextView
-                        android:id="@+id/filter_empolgante"
+                        android:id="@+id/exciting_filter_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Empolgante"
-                        android:textColor="#FFFFFF"
+                        android:text="@string/exciting_category"
+                        android:textColor="@color/white"
                         android:layout_weight="1"
                         android:gravity="center" />
 
                     <TextView
-                        android:id="@+id/filter_sinistro"
+                        android:id="@+id/sinister_filter_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Sinistro"
-                        android:textColor="#FFFFFF"
+                        android:text="@string/sinister_category"
+                        android:textColor="@color/white"
                         android:layout_weight="1"
                         android:gravity="start" />
                 </LinearLayout>
@@ -149,11 +146,11 @@
 
 
                     <TextView
-                        android:id="@+id/textView8"
+                        android:id="@+id/my_list_label_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="+\n MINHA LISTA"
-                        android:textColor="#FFFFFF"
+                        android:text="@string/my_list_capitalized"
+                        android:textColor="@color/white"
                         android:layout_weight="1"
                         android:layout_gravity="center"
                         android:gravity="center"
@@ -163,12 +160,12 @@
                         />
 
                     <com.google.android.material.button.MaterialButton
-                        android:id="@+id/button4"
+                        android:id="@+id/watch_button"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:backgroundTint="#FF0000"
-                        android:text="ASSISTIR"
-                        android:textColor="#FFFFFF"
+                        android:text="@string/watch_capitalized"
+                        android:textColor="@color/white"
                         app:cornerRadius="6dp"
                         app:icon="@drawable/baseline_play_arrow_24"
                         android:layout_weight="1"
@@ -178,18 +175,17 @@
                         />
 
                     <TextView
-                        android:id="@+id/textView9"
+                        android:id="@+id/details_label_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:drawableTop="@drawable/baseline_info_24"
-                        android:text="DETALHES"
-                        android:textColor="#FFFFFF"
+                        android:text="@string/details_capitalized"
+                        android:textColor="@color/white"
                         android:layout_weight="1"
                         android:layout_gravity="center"
                         android:gravity="center"
                         android:paddingStart="0dp"
                         android:paddingEnd="150dp"
-                        />
+                        app:drawableTopCompat="@drawable/baseline_info_24" />
                 </LinearLayout>
 
                 <!-- Fourth Row -->
@@ -201,11 +197,11 @@
 
                     <!-- Label -->
                     <TextView
-                        android:id="@+id/label"
+                        android:id="@+id/releases_label_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Lançamentos"
-                        android:textColor="#FFFFFF"
+                        android:text="@string/releases"
+                        android:textColor="@color/white"
                         android:layout_marginStart="84dp"/>
 
                     <!-- Movies -->
@@ -218,7 +214,7 @@
                         android:layout_margin="0dp">
 
                         <ImageView
-                            android:id="@+id/imageView3"
+                            android:id="@+id/featured_movie_1"
                             android:layout_width="84dp"
                             android:layout_height="48dp"
                             android:layout_marginTop="10dp"
@@ -226,7 +222,7 @@
                             android:layout_weight="1" />
 
                         <ImageView
-                            android:id="@+id/imageView5"
+                            android:id="@+id/featured_movie_2"
                             android:layout_width="84dp"
                             android:layout_height="48dp"
                             android:layout_marginTop="10dp"
@@ -234,7 +230,7 @@
                             android:layout_weight="1" />
 
                         <ImageView
-                            android:id="@+id/imageView6"
+                            android:id="@+id/featured_movie_3"
                             android:layout_width="84dp"
                             android:layout_height="48dp"
                             android:layout_marginTop="10dp"
@@ -251,14 +247,6 @@
 
         </FrameLayout>
     </FrameLayout>
-
-
-
-
-
-
-
-
 
 
 </FrameLayout>

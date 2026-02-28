@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Netflix</string>
+    <string name="series">Séries</string>
+    <string name="movies">Filmes</string>
+    <string name="mine_list">Minha Lista</string>
+    <string name="my_list_capitalized">+\nMINHA LISTA</string>
+    <string name="violence_category">Violência</string>
+    <string name="exciting_category">Empolgante</string>
+    <string name="sinister_category">Sinistro</string>
+    <string name="watch_capitalized">ASSISTIR</string>
+    <string name="details_capitalized">DETALHES</string>
+    <string name="releases">Lançamentos</string>
 </resources>
